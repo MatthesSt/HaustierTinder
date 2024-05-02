@@ -8,4 +8,3 @@
 * Datenbank: MariaDB
 * Datenanalyse-Tool: JupyterNotebook
 * Aufteilung der Arbeit: nach Features
-* 
