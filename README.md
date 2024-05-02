@@ -24,9 +24,15 @@
 * Default- / Start-Seite
     - swipen
     - buttons (match, ablehnen, zurück, history, Filter)
+      -> history getrennt nach Matches / abgelehnt 
     - Filter
         * Art -> Unterart
         * Entfernung
         * Alter
     - Tutorial (erstes Öffnen)
+
+![[assets/mockup.png]]
+
+### Datenbank:
+![[assets/datenbank.jpg]]
 
