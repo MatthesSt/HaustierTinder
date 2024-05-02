@@ -1,7 +1,11 @@
 # HaustierTinder
 
 ## Entscheidungen
-* 
+* DevContainer (Vorteil: Einrichtungsaufwand wird reduziert)
 * Sprache: JavaScript
 * Frontend: Vue 3
-* Backend: 
+* Backend: Laravel (PHP)
+* Datenbank: MariaDB
+* Datenanalyse-Tool: JupyterNotebook
+* Aufteilung der Arbeit: nach Features
+* 
