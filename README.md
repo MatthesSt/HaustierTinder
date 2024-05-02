@@ -1,7 +1,7 @@
 # HaustierTinder
 
 ## Entscheidungen
-* Sprache: JavaScript
-* Framework: Vue 3
-* Arbeitsumgebung: DevContainer
 * 
+* Sprache: JavaScript
+* Frontend: Vue 3
+* Backend: 
