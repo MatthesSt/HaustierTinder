@@ -1,0 +1,40 @@
+name: PR Testing (Frontend)
+
+on:
+  pull_request:
+
+jobs:
+  testing-frontend:
+    name: ${{ matrix.command }}
+    strategy:
+      fail-fast: false
+      matrix:
+        command: [bun run build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+            bun-version: latest
+      - name: Install Dependencies
+        run: bun install
+      - name: Run ${{ matrix.command }}
+        run: ${{ matrix.command }}
+
+  # This test should only stay until Bun is available for Windows.
+  testing-frontend-node:
+    name: npm run build (Node)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run npm run build
+        run: npm run build
