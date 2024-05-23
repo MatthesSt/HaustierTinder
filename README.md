@@ -1,11 +1,12 @@
 # HaustierTinder
 
+Willkommen bei HaustierTinder, unserer Vermittlung für Haustiersuchende und Tierheime im Tinder-Format! :party:
+
 ## Entscheidungen
-* Sprache: TypeScript
-* Frontend: Vue 3
+* Sprache: TypeScript 5.4
+* Frontend: Vue 3, Bootstrap 5
 * Datenbank: Localstorage
-* Datenanalyse-Tool: JupyterNotebook
-* Aufteilung der Arbeit: nach Features
+* Datenanalyse: JupyterNotebook
 
 ## Features
 * Profil (Suchende): [Tim]
@@ -72,6 +73,3 @@ Tierheim[]
         rasse:string
         farbe: string
         besonderheiten: string
-        
-
-
