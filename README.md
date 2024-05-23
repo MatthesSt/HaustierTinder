@@ -1,9 +1,37 @@
-# Vue 3 + TypeScript + Vite
+# HaustierTinder
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Entscheidungen
+* DevContainer (Vorteil: Einrichtungsaufwand wird reduziert) // https://github.com/TimL135/empty_laravel
+* Sprache: JavaScript
+* Frontend: Vue 3
+* Backend: Laravel (PHP)
+* Datenbank: MariaDB
+* Datenanalyse-Tool: JupyterNotebook
+* Aufteilung der Arbeit: nach Features
 
-## Recommended Setup
+## Features
+* Profil (Suchende):
+    - Präferenzen (registration (überprüfbar) + nachträglich) 
+        -> Filter
+    - "Matches" anzeigen
+* Profil (Tierheim): 
+    - Tierinserate anlegen
+    - Informationen -> Kontakt
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+* Administration:
+    - Tierheimprofile anlegen
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+* Default- / Start-Seite
+    - swipen
+    - buttons (match, ablehnen, zurück, history, Filter)
+      -> history getrennt nach Matches / abgelehnt 
+    - Filter
+        * Art -> Unterart
+        * Entfernung
+        * Alter
+    - Tutorial (erstes Öffnen)
+
+![[assets/mockup.png]]
+
+### Datenbank:
+![[assets/datenbank.jpg]]
