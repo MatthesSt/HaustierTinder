@@ -1,27 +1,28 @@
 # HaustierTinder
 
 ## Entscheidungen
-* DevContainer (Vorteil: Einrichtungsaufwand wird reduziert) // https://github.com/TimL135/empty_laravel
-* Sprache: JavaScript
+* Sprache: TypeScript
 * Frontend: Vue 3
-* Backend: Laravel (PHP)
-* Datenbank: MariaDB
+* Datenbank: Localstorage
 * Datenanalyse-Tool: JupyterNotebook
 * Aufteilung der Arbeit: nach Features
 
 ## Features
-* Profil (Suchende):
+* Profil (Suchende): [Tim]
     - Präferenzen (registration (überprüfbar) + nachträglich) 
         -> Filter
     - "Matches" anzeigen
-* Profil (Tierheim): 
+* Profil (Tierheim): [Vicky]
     - Tierinserate anlegen
     - Informationen -> Kontakt
 
-* Administration:
+* Administration: [Matthes, Danny]
     - Tierheimprofile anlegen
+ 
+* Login [Danny, Matthes]
+    - Enduser, Admin, Tierheime
 
-* Default- / Start-Seite
+* Default- / Start-Seite [Tobias, Fabian, Vincent]
     - swipen
     - buttons (match, ablehnen, zurück, history, Filter)
       -> history getrennt nach Matches / abgelehnt 
@@ -31,13 +32,46 @@
         * Alter
     - Tutorial (erstes Öffnen)
  
-* Repository-Management
+* Repository-Management [Danny]
     - Dependency Management
     - PR Testing Workflows
     - QoL-Dateien (CODEOWNERS, nvmrc, etc.)
+    - Mergekonflikte
+ 
+* Datenanalyse vorbereiten [Johannes]
 
 ![](assets/mockup.png)
 
 ### Datenbank:
 ![](assets/datenbank.jpg)
+id: string
+User[]
+    name: string
+    email: email
+    password: string
+    role: "user"| "admin"|"tierheim"
+    id:id
+    geseheneTiere:
+        {
+        ids:[Tierheim_id,Tier_id]
+        anzahl:number
+        liked:boolean
+        }[]
+Tierheim[]
+    name: string
+    standort: string
+    id:id
+    telefonnummer:string
+    email:email
+    homepage: string
+    tier[]
+        name: string
+        id: id
+        alter: number
+        art:string
+        rasse:string
+        farbe: string
+        besonderheiten: string
+        
+
 
