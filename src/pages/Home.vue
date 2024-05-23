@@ -2,10 +2,19 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
 </script>
 <template>
   <div>
     <h1 class="text-center">Haustier Tinder</h1>
+    <div class="w-100 d-flex justify-content-between">
+      <button type="button" class="btn btn-light color-black">
+        <i class="bi bi-list"></i>
+      </button>
+      <button type="button" class="btn btn-light">
+        <i class="bi bi-gear"></i>
+      </button>
+    </div>
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
