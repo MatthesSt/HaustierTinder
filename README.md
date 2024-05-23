@@ -31,8 +31,8 @@
         * Alter
     - Tutorial (erstes Öffnen)
 
-![[assets/mockup.png]]
+![](assets/mockup.png)
 
 ### Datenbank:
-![[assets/datenbank.jpg]]
+![](assets/datenbank.jpg)
 
