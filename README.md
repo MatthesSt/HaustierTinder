@@ -30,6 +30,11 @@
         * Entfernung
         * Alter
     - Tutorial (erstes Öffnen)
+ 
+* Repository-Management
+    - Dependency Management
+    - PR Testing Workflows
+    - QoL-Dateien (CODEOWNERS, nvmrc, etc.)
 
 ![](assets/mockup.png)
 
