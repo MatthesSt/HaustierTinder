@@ -64,7 +64,7 @@ function saveShelter() {
             v-model="newShelter.telefonnummer"
           />
           <div class="d-flex justify-content-end">
-            <button class="btn btn-success">Speichern</button>
+            <button class="btn btn-success">Erstellen</button>
           </div>
         </form>
       </div>
