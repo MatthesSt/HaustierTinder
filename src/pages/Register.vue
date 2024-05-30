@@ -8,7 +8,7 @@ const newUser = ref<User>({
   username: "",
   password: "",
   email: "",
-  rolle: "user",
+  role: "user",
 });
 
 function saveUser() {
