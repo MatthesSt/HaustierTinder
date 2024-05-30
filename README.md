@@ -33,7 +33,7 @@ Willkommen bei HaustierTinder, unserer Vermittlung für Haustiersuchende und Tie
         * Alter
     - Tutorial (erstes Öffnen)
 
-* ✔ Repository-Management [Danny]
+✔ Repository-Management [Danny]
     - Dependency Management
     - PR Testing Workflows
     - QoL-Dateien (CODEOWNERS, nvmrc, etc.)
