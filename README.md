@@ -37,7 +37,6 @@ Willkommen bei HaustierTinder, unserer Vermittlung für Haustiersuchende und Tie
     - Dependency Management
     - PR Testing Workflows
     - QoL-Dateien (CODEOWNERS, nvmrc, etc.)
-    - Mergekonflikte
  
 * Datenanalyse vorbereiten [Johannes]
 
@@ -45,8 +44,13 @@ Willkommen bei HaustierTinder, unserer Vermittlung für Haustiersuchende und Tie
 
 ### Datenbank:
 ![](assets/datenbank.jpg)
+
+### Datenstruktur
+
 id: string
+
 User[]
+
     name: string
     email: email
     password: string
@@ -58,7 +62,9 @@ User[]
         anzahl:number
         liked:boolean
         }[]
+
 Tierheim[]
+
     name: string
     standort: string
     id:id
