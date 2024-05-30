@@ -1,9 +1,4 @@
-<script setup lang="ts">
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
-</script>
+<script setup lang="ts"></script>
 
 <template><RouterView /></template>
 
