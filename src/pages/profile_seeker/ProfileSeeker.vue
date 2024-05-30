@@ -1,50 +1,37 @@
 <template>
-    <div class="container">
-        <div class="row g-2">
-            <div v-for="animal of animals" class="col-6">
-                <div class="card" role="button" :class="{'bg-primary': animal.actice}" @click="animal.actice=!animal.actice">
-                    <div class="card-body" >
-                        {{ animal.german }}
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div>
+      <h1>Hallo, {{ userName }}</h1>
     </div>
 
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item" v-for="item of ['Präferenzen', 'Matches']">
+        <h2 class="accordion-header" :id="`headind${item}`">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            :data-bs-target="`#collapse${item}`" aria-expanded="false" :aria-controls="`collapse${item}`">
+            {{ item }}
+          </button>
+        </h2>
+        <div :id="`collapse${item}`" class="accordion-collapse collapse" :aria-labelledby="`headind${item}`"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <Preferences v-if="item == 'Präferenzen'" />
+            <Matches v-if="item == 'Matches'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-const animals =ref(getAnimals()|| [
-{ german: 'Hund', english: 'dog' ,actice:false},
-{ german: 'Katze', english: 'cat' ,actice:false},
-{ german: 'Pferd', english: 'horse' ,actice:false},
-{ german: 'Kuh', english: 'cow' ,actice:false},
-{ german: 'Schwein', english: 'pig' ,actice:false},
-{ german: 'Huhn', english: 'chicken' ,actice:false},
-{ german: 'Ente', english: 'duck' ,actice:false},
-{ german: 'Gans', english: 'goose' ,actice:false},
-{ german: 'Schaf', english: 'sheep' ,actice:false},
-{ german: 'Ziege', english: 'goat' ,actice:false},
-{ german: 'Kaninchen', english: 'rabbit' ,actice:false},
-{ german: 'Frosch', english: 'frog' ,actice:false},
-{ german: 'Spinne', english: 'spider' ,actice:false},
-{ german: 'Käfer', english: 'beetle' ,actice:false},
-{ german: 'Motte', english: 'moth' ,actice:false},
-{ german: 'Kakerlake', english: 'cockroach' ,actice:false},
-{ german: 'Heuschrecke', english: 'grasshopper' ,actice:false},
-{ german: 'Ameisenbär', english: 'anteater' ,actice:false},
-{ german: 'Eichhörnchen', english: 'squirrel' ,actice:false},
-{ german: 'Bär', english: 'bear' ,actice:false},
-{ german: 'Löwe', english: 'lion' ,actice:false},
-{ german: 'Tiger', english: 'tiger' ,actice:false},
-]) 
-watch(animals, setAnimals, {deep:true});
-function setAnimals(){
-    localStorage.setItem('profile_seeker_animals', JSON.stringify(animals.value));
-}
-function getAnimals(){
-    return JSON.parse(localStorage.getItem('profile_seeker_animals')||"false");
-}
+import { ref } from 'vue';
+import Preferences from "./Preferences.vue"
+import Matches from "./Matches.vue"
+
+
+const userName = ref('placeholder');
+
+
 
 </script>
 <style></style>
