@@ -28,10 +28,7 @@ import { ref } from 'vue';
 import Preferences from "./Preferences.vue"
 import Matches from "./Matches.vue"
 
-
 const userName = ref('placeholder');
-
-
 
 </script>
 <style></style>
