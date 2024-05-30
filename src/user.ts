@@ -1,4 +1,4 @@
-import {User} from "./types";
+import { User } from "./types";
 import router from "./router.ts";
 
 export function getUsers(): User[] {
