@@ -19,7 +19,7 @@ Willkommen bei HaustierTinder, unserer Vermittlung für Haustiersuchende und Tie
 
 * Administration: [Matthes, Danny]
     - Tierheimprofile anlegen
- 
+
 * Login [Danny, Matthes]
     - Enduser, Admin, Tierheime
 
@@ -32,13 +32,17 @@ Willkommen bei HaustierTinder, unserer Vermittlung für Haustiersuchende und Tie
         * Entfernung
         * Alter
     - Tutorial (erstes Öffnen)
- 
-* Repository-Management [Danny]
+
+* ✔ Repository-Management [Danny]
     - Dependency Management
     - PR Testing Workflows
     - QoL-Dateien (CODEOWNERS, nvmrc, etc.)
- 
+
 * Datenanalyse vorbereiten [Johannes]
+
+* QoL, UI/UX, QA [Danny]
+    - Endabnahme (= QA), insbesondere von UI/UX
+    - kontinuierliche Betrachtung und Erwägung möglicher QoL-Features
 
 ![](assets/mockup.png)
 
