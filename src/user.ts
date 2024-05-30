@@ -12,16 +12,11 @@ export function addUser(user: User) {
 }
 
 export function loginUser(email: string, password: string) {
-  const users = getUsers();
-  for(const user of users) {
-    if(email === user.email) {
-      if(password === user.password) {
+  if(getUsers().find(user => user.email == email && user.password == password){
         localStorage.setItem("current_user", JSON.stringify(user));
         router.push("/");
+        console.log("The login was unsuccessful.")
         return;
-      }
-      break;
-    }
   }
-  console.log("The login was unsuccessful.")
+  console.log("no account with these credentials was found");
 }
