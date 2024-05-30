@@ -12,7 +12,7 @@ export function addUser(user: User) {
 }
 
 export function loginUser(email: string, password: string) {
-  if(getUsers().find(user => user.email == email && user.password == password){
+  if(getUsers().find(user => user.email == email && user.password == password)){
         localStorage.setItem("current_user", JSON.stringify(user));
         router.push("/");
         console.log("The login was unsuccessful.")
