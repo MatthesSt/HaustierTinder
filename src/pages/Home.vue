@@ -1,4 +1,4 @@
-<script setup></script>
+<script setup lang="ts"></script>
 <template>
   <div class="d-flex flex-column justify-content-center align-items-center">
     <h1 class="my-3"><b>Haustier Tinder</b></h1>
