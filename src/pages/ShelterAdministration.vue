@@ -42,7 +42,7 @@ function saveShelter() {
           <input
             type="text"
             class="form-control mb-2"
-            placeholder="Email"
+            placeholder="E-Mail-Adresse"
             v-model="newShelter.email"
           />
           <input
