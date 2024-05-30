@@ -20,31 +20,31 @@ function saveUser() {
     class="d-flex justify-content-center align-items-center"
     style="min-height: 100vh"
   >
-    <div class="card w-25">
+    <div class="card w-auto">
       <div class="card-body">
         <form @submit.prevent="saveUser">
           <input
             type="text"
-            class="form-control mb-2"
-            placeholder="Username"
+            class="form-control mb-3"
+            placeholder="Benutzername"
             v-model="newUser.username"
           />
           <input
-            class="form-control mb-2"
+            class="form-control mb-3"
             type="password"
-            placeholder="Password"
+            placeholder="Passwort"
             v-model="newUser.password"
           />
           <input
-            class="form-control"
+            class="form-control mb-2"
             type="text"
-            placeholder="Email"
+            placeholder="E-Mail-Adresse"
             v-model="newUser.email"
           />
-          <div class="d-flex justify-content-between align-items-center mt-2">
-            <a href="/#/login">zurück zum login</a>
-            <button class="btn btn-success">registrieren</button>
-          </div>
+            <div class="">
+              <div class="">Du hast bereits ein Konto?<span class="mx-1"></span><a href="/#/login">Zum Login</a></div>
+              <div class="mt-3"><button class="btn btn-success">Registrieren</button></div>
+            </div>
         </form>
       </div>
     </div>
