@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row g-2">
             <div v-for="animal of currentUser.preferences" class="col-6">
-                <div class="card" role="button" :class="{ 'bg-primary': animal.actice }"
-                    @click="animal.actice = !animal.actice">
+                <div class="card" role="button" :class="{ 'bg-primary': animal.active }"
+                    @click="animal.active = !animal.active">
                     <div class="card-body">
                         {{ animal.german }}
                     </div>
