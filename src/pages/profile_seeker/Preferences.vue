@@ -1,5 +1,5 @@
 <template>
-    <p>Wähle aus welche Tiere du suchen möchtest</p>
+    <p>Wähle aus, welche Tiere du suchen möchtest.</p>
     <div class="container">
         <div class="row g-2">
             <div v-for="animal of currentUser.preferences" class="col-6">
