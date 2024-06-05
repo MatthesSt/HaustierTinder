@@ -6,12 +6,12 @@ import Register from "./pages/Register.vue";
 import ShelterAdministration from "./pages/ShelterAdministration.vue";
 import Login from "./pages/Login.vue";
 
-const routes = [
-    { path: "/", component: Home },
-    { path: "/swipe", component: Swipe },
-    { path: "/login", component: Login },
-    { path: "/register", component: Register },
-    { path: "/shelter", component: ShelterAdministration },
+export const routes = [
+  { path: "/", component: Home },
+  { path: "/swipe", component: Swipe, icon: "bi bi-house", active: "true" },
+  { path: "/login", component: Login },
+  { path: "/register", component: Register },
+  { path: "/shelter", component: ShelterAdministration, icon: "bi bi-house-add", active: "currentUser.role == 'admin'" },
 ];
 
 const router = createRouter({
