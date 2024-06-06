@@ -4,6 +4,7 @@ export type User = {
   email: string;
   role: "user" | "admin" | "tierheim";
   password: string;
+  preferences: { german: string, english: string, active: boolean }[]
 };
 
 export type Shelter = {
