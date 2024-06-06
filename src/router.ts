@@ -5,6 +5,7 @@ import Swipe from "./pages/SwipePage.vue";
 import Register from "./pages/Register.vue";
 import ShelterAdministration from "./pages/ShelterAdministration.vue";
 import Login from "./pages/Login.vue";
+import ProfileSeeker from "./pages/profile_seeker/ProfileSeeker.vue";
 
 export const routes = [
   { path: "/", component: Home },
@@ -12,6 +13,7 @@ export const routes = [
   { path: "/login", component: Login },
   { path: "/register", component: Register },
   { path: "/shelter", component: ShelterAdministration, icon: "bi bi-house-add", active: "currentUser.role == 'admin'" },
+  { path: "/profile-seeker", component: ProfileSeeker, icon: "bi bi-person", active: "true" },
 ];
 
 const router = createRouter({

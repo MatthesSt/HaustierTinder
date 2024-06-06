@@ -9,6 +9,30 @@ const newUser = ref<User>({
   password: "",
   email: "",
   role: "user",
+  preferences: [
+    { german: 'Hund', english: 'dog', active: false },
+    { german: 'Katze', english: 'cat', active: false },
+    { german: 'Pferd', english: 'horse', active: false },
+    { german: 'Kuh', english: 'cow', active: false },
+    { german: 'Schwein', english: 'pig', active: false },
+    { german: 'Huhn', english: 'chicken', active: false },
+    { german: 'Ente', english: 'duck', active: false },
+    { german: 'Gans', english: 'goose', active: false },
+    { german: 'Schaf', english: 'sheep', active: false },
+    { german: 'Ziege', english: 'goat', active: false },
+    { german: 'Kaninchen', english: 'rabbit', active: false },
+    { german: 'Frosch', english: 'frog', active: false },
+    { german: 'Spinne', english: 'spider', active: false },
+    { german: 'Käfer', english: 'beetle', active: false },
+    { german: 'Motte', english: 'moth', active: false },
+    { german: 'Kakerlake', english: 'cockroach', active: false },
+    { german: 'Heuschrecke', english: 'grasshopper', active: false },
+    { german: 'Ameisenbär', english: 'anteater', active: false },
+    { german: 'Eichhörnchen', english: 'squirrel', active: false },
+    { german: 'Bär', english: 'bear', active: false },
+    { german: 'Löwe', english: 'lion', active: false },
+    { german: 'Tiger', english: 'tiger', active: false },
+  ]
 });
 
 function saveUser() {
@@ -16,35 +40,17 @@ function saveUser() {
 }
 </script>
 <template>
-  <div
-    class="d-flex justify-content-center align-items-center"
-    style="min-height: 100vh"
-  >
+  <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh">
     <div class="card w-auto">
       <div class="card-body">
         <form @submit.prevent="saveUser">
-          <input
-            type="text"
-            class="form-control mb-3"
-            placeholder="Benutzername"
-            v-model="newUser.username"
-          />
-          <input
-            class="form-control mb-3"
-            type="password"
-            placeholder="Passwort"
-            v-model="newUser.password"
-          />
-          <input
-            class="form-control mb-2"
-            type="text"
-            placeholder="E-Mail-Adresse"
-            v-model="newUser.email"
-          />
-            <div class="">
-              <div class="">Du hast bereits ein Konto?<span class="mx-1"></span><a href="/#/login">Zum Login</a></div>
-              <div class="mt-3"><button class="btn btn-success">Registrieren</button></div>
-            </div>
+          <input type="text" class="form-control mb-3" placeholder="Benutzername" v-model="newUser.username" />
+          <input class="form-control mb-3" type="password" placeholder="Passwort" v-model="newUser.password" />
+          <input class="form-control mb-2" type="text" placeholder="E-Mail-Adresse" v-model="newUser.email" />
+          <div class="">
+            <div class="">Du hast bereits ein Konto?<span class="mx-1"></span><a href="/#/login">Zum Login</a></div>
+            <div class="mt-3"><button class="btn btn-success">Registrieren</button></div>
+          </div>
         </form>
       </div>
     </div>
