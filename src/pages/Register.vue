@@ -55,9 +55,9 @@ function saveUser() {
         </div>
 
         <form @submit.prevent="saveUser">
-          <input type="text" class="form-control mb-3" placeholder="Benutzername" v-model="newUser.username" />
-          <input class="form-control mb-3" type="password" placeholder="Passwort" v-model="newUser.password" />
-          <input class="form-control mb-2" type="text" placeholder="E-Mail-Adresse" v-model="newUser.email" />
+          <input type="text" class="form-control mb-3" placeholder="Benutzername" v-model="newUser.username" required />
+          <input class="form-control mb-3" type="password" placeholder="Passwort" v-model="newUser.password" required />
+          <input class="form-control mb-2" type="text" placeholder="E-Mail-Adresse" v-model="newUser.email" required />
           <div class="">
             <div class="">Du hast bereits ein Konto?<span class="mx-1"></span><a href="/#/login">Zum Login</a></div>
             <div class="mt-3"><button class="btn btn-success">Registrieren</button></div>
