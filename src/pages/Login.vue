@@ -21,8 +21,10 @@ function attemptLogin() {
         </div>
 
         <form @submit.prevent="attemptLogin">
-          <input class="form-control mb-3" type="text" placeholder="E-Mail-Adresse" v-model="loginCredentials.email" />
-          <input class="form-control mb-2" type="password" placeholder="Passwort" v-model="loginCredentials.password" />
+          <input class="form-control mb-3" type="text" placeholder="E-Mail-Adresse" v-model="loginCredentials.email"
+            required />
+          <input class="form-control mb-2" type="password" placeholder="Passwort" v-model="loginCredentials.password"
+            required />
           <div class="">
             <div class="">Noch kein Konto?<span class="mx-1"></span><a href="/#/register">Hier registrieren!</a></div>
             <div class="mt-3"><button class="btn btn-success">Einloggen</button></div>
