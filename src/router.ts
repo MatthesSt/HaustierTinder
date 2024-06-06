@@ -7,13 +7,13 @@ import ShelterAdministration from "./pages/ShelterAdministration.vue";
 import Login from "./pages/Login.vue";
 import ProfileSeeker from "./pages/profile_seeker/ProfileSeeker.vue";
 
-const routes = [
+export const routes = [
   { path: "/", component: Home },
-  { path: "/swipe", component: Swipe },
+  { path: "/swipe", component: Swipe, icon: "bi bi-house", active: "true" },
   { path: "/login", component: Login },
   { path: "/register", component: Register },
-  { path: "/shelter", component: ShelterAdministration },
-  { path: "/profile-seeker", component: ProfileSeeker },
+  { path: "/shelter", component: ShelterAdministration, icon: "bi bi-house-add", active: "currentUser.role == 'admin'" },
+  { path: "/profile-seeker", component: ProfileSeeker, icon: "bi bi-person", active: "true" },
 ];
 
 const router = createRouter({
