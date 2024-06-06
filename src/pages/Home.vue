@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import router from "../router.ts";
+
+if(!localStorage.getItem("current_user")) {
+  router.push("/login")
+}
+</script>
 <template>
   <div class="d-flex flex-column justify-content-center align-items-center">
     <h1 class="my-3"><b>Haustier Tinder</b></h1>
