@@ -45,5 +45,5 @@ export function logoutUser() {
   localStorage.removeItem("current_user");
   currentUser.value = null;
   router.push("/login");
-  console.log("The logout was unsuccessful.")
+  console.log("The logout was successful.")
 }
