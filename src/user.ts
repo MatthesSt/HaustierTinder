@@ -21,7 +21,7 @@ export function loginUser(email: string, password: string) {
     localStorage.setItem("current_user", JSON.stringify(user));
     loadCurrentUser();
     router.push("/");
-    console.log("The login was unsuccessful.")
+    console.log("The login was successful.")
     return;
   }
   console.log("no account with these credentials was found");
