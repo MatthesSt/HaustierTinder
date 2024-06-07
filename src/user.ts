@@ -1,9 +1,11 @@
 import { User } from "./types";
 import router from "./router.ts";
 import { ref, watch } from "vue";
+import { getShelter } from "./shelter.ts";
 
 export const currentUser = ref<User | null>(null);
 loadCurrentUser();
+getShelter();
 
 export function getUsers(): User[] {
   return JSON.parse(localStorage.getItem("users") || "[]");
@@ -31,6 +33,7 @@ export function loginUser(email: string, password: string) {
     loadCurrentUser();
     router.push("/");
     console.log("The login was successful.")
+    getShelter();
     return '';
   }
   console.log("no account with these credentials was found");

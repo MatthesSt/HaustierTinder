@@ -6,6 +6,7 @@ import Register from "./pages/Register.vue";
 import ShelterAdministration from "./pages/ShelterAdministration.vue";
 import Login from "./pages/Login.vue";
 import ProfileSeeker from "./pages/profile_seeker/ProfileSeeker.vue";
+import ProfileShelter from "./pages/profile_shelter/ProfileShelter.vue";
 
 export const routes = [
   { path: "/", component: Home },
@@ -14,6 +15,8 @@ export const routes = [
   { path: "/register", component: Register },
   { path: "/shelter", component: ShelterAdministration, icon: "bi bi-house-add", active: "currentUser.role == 'admin'" },
   { path: "/profile-seeker", component: ProfileSeeker, icon: "bi bi-person", active: "true" },
+  { path: "/profile-shelter", component: ProfileShelter, icon: "bi bi-person", active: "true" },
+
 ];
 
 const router = createRouter({
