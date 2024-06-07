@@ -15,7 +15,7 @@ export const routes = [
   { path: "/register", component: Register },
   { path: "/shelter", component: ShelterAdministration, icon: "bi bi-house-add", active: "currentUser.role == 'admin'" },
   { path: "/profile-seeker", component: ProfileSeeker, icon: "bi bi-person", active: "true" },
-  { path: "/profile-shelter", component: ProfileShelter, icon: "bi bi-person", active: "true" },
+  { path: "/profile-shelter", component: ProfileShelter, icon: "bi bi-filetype-sh", active: "currentUser.role == 'tierheim'" },
 
 ];
 
