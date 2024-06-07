@@ -45,12 +45,12 @@ function editShelter(shelter: Shelter) {
     <div class="card mb-3">
       <div class="card-body">
         <form @submit.prevent="saveShelter">
-          <input type="text" class="form-control mb-2" placeholder="Name" v-model="currentShelter.name" />
-          <input type="text" class="form-control mb-2" placeholder="E-Mail-Adresse" v-model="currentShelter.email" />
-          <input type="text" class="form-control mb-2" placeholder="Homepage" v-model="currentShelter.homepage" />
-          <input type="text" class="form-control mb-2" placeholder="Standort" v-model="currentShelter.standort" />
-          <input type="text" class="form-control mb-2" placeholder="Telefonnummer" v-model="currentShelter.telefonnummer" />
-          <select class="form-select" aria-label="Default select example" v-model="currentShelter.user_id">
+          <input type="text" class="form-control mb-2" placeholder="Name" v-model="currentShelter.name" required/>
+          <input type="text" class="form-control mb-2" placeholder="E-Mail-Adresse" v-model="currentShelter.email" required/>
+          <input type="text" class="form-control mb-2" placeholder="Homepage" v-model="currentShelter.homepage" required/>
+          <input type="text" class="form-control mb-2" placeholder="Standort" v-model="currentShelter.standort" required/>
+          <input type="text" class="form-control mb-2" placeholder="Telefonnummer" v-model="currentShelter.telefonnummer" required/>
+          <select class="form-select" aria-label="Default select example" v-model="currentShelter.user_id" required>
             <option value="">Wähle einen Verwalter</option>
             <option v-for="user of users" :value="user.id">{{ user.username }}</option>
           </select>
