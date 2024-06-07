@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { currentShelter, createAnimal } from "../../shelter";
+import { createAnimal } from "../../shelter";
 import Animals from "./Animals.vue";
 import { Animal } from "../../types";
 
