@@ -11,8 +11,17 @@ export function getUsers(): User[] {
 
 export function addUser(user: User) {
   const users = getUsers();
+  const errors = [];
+  if (!user.username) errors.push("Der Benutzername darf nicht leer sein.");
+  if (!user.email) errors.push("Die E-Mail-Adresse darf nicht leer sein.");
+  if (!user.password) errors.push("Das Passwort darf nicht leer sein.");
+  if (users.find(u => u.email == user.email))
+    errors.push("Ein Benutzer mit dieser E-Mail-Adresse existiert bereits.");
+  if (errors.length) return errors;
+
   users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
+  return [];
 }
 
 export function loginUser(email: string, password: string) {
