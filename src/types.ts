@@ -2,9 +2,9 @@ export type User = {
   id: string;
   username: string;
   email: string;
-  role: "user" | "admin" | "tierheim";
+  role: 'user' | 'admin' | 'tierheim';
   password: string;
-  preferences: { german: string, english: string, active: boolean }[]
+  preferences: Animal['art'][];
 };
 
 export type Shelter = {
