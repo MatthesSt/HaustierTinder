@@ -14,13 +14,16 @@ export type Shelter = {
   telefonnummer: string;
   email: string;
   homepage: string;
-  tiere: {
-    name: string;
-    id: string;
-    alter: number;
-    art: string;
-    rasse: string;
-    farbe: string;
-    besonderheiten: string;
-  }[];
+  user_id: string;
+  tiere: Animal[];
+};
+
+export type Animal = {
+  name: string;
+  id: string;
+  alter: number;
+  art: string;
+  rasse: string;
+  farbe: string;
+  besonderheiten: string;
 };
