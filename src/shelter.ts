@@ -41,3 +41,17 @@ function setCurrentShelter() {
 export function getUniqueAnimals() {
   return [...new Set(getShelters().reduce((acc: string[], shelter) => [...acc, ...shelter.tiere.map(t => t.art)], []))];
 }
+
+export function updateShelter(shelter: Shelter) {
+  const shelters = getShelters();
+  const index = shelters.findIndex(s => s.id == shelter.id);
+  shelters[index] = shelter;
+  localStorage.setItem('shelters', JSON.stringify(shelters));
+}
+
+export function deleteShelter(shelter: Shelter) {
+  const shelters = getShelters();
+  const index = shelters.findIndex(s => s.id == shelter.id);
+  shelters.splice(index, 1);
+  localStorage.setItem('shelters', JSON.stringify(shelters));
+}

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { loginUser } from "../user";
+import { ref } from 'vue';
+import { loginUser } from '../user';
 
-const error = ref("");
+const error = ref('');
 const loginCredentials = {
-  email: "",
-  password: ""
-}
+  email: '',
+  password: '',
+};
 
 function attemptLogin() {
   error.value = loginUser(loginCredentials.email, loginCredentials.password);
@@ -21,12 +21,14 @@ function attemptLogin() {
         </div>
 
         <form @submit.prevent="attemptLogin">
-          <input class="form-control mb-3" type="text" placeholder="E-Mail-Adresse" v-model="loginCredentials.email"
-            required />
-          <input class="form-control mb-2" type="password" placeholder="Passwort" v-model="loginCredentials.password"
-            required />
+          <input class="form-control mb-3" type="text" placeholder="E-Mail-Adresse" v-model="loginCredentials.email" required />
+          <input class="form-control mb-2" type="password" placeholder="Passwort" v-model="loginCredentials.password" required />
           <div>
-            <div class="">Noch kein Konto?<span class="mx-1"></span><a href="/#/register">Hier registrieren!</a></div>
+            <div class="">
+              Noch kein Konto?
+              <span class="mx-1"></span>
+              <a href="/#/register">Hier registrieren!</a>
+            </div>
             <div class="mt-3"><button class="btn btn-success">Einloggen</button></div>
           </div>
         </form>
@@ -34,4 +36,3 @@ function attemptLogin() {
     </div>
   </div>
 </template>
-<style scoped lang="scss"></style>
