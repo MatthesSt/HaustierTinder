@@ -22,9 +22,10 @@ export function loginUser(email: string, password: string) {
     loadCurrentUser();
     router.push("/");
     console.log("The login was successful.")
-    return;
+    return '';
   }
   console.log("no account with these credentials was found");
+  return "Es konnte kein Account mit diesen Anmeldedaten gefunden werden."
 }
 function loadCurrentUser() {
   currentUser.value = JSON.parse(localStorage.getItem("current_user") || "null");
