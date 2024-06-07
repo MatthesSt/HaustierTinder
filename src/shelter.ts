@@ -1,18 +1,21 @@
-import { ref, watch } from "vue";
-import { Shelter, Animal } from "./types";
-import { currentUser } from "./user";
+import { ref, watch } from 'vue';
+import { Shelter, Animal } from './types';
+import { currentUser, getUsers, updateUser } from './user';
 
 export const currentShelter = ref<Shelter | null>(null);
 
 export function getShelters(): Shelter[] {
-  const shelters = JSON.parse(localStorage.getItem("shelters") || "[]");
+  const shelters = JSON.parse(localStorage.getItem('shelters') || '[]');
   return shelters;
 }
 
 export function addShelter(shelter: Shelter) {
+  const shelterAdmin = getUsers().find(user => user.id == shelter.user_id);
+  if (!shelterAdmin) return;
+  updateUser({ ...shelterAdmin, role: 'tierheim' });
   const shelters = getShelters();
   shelters.push(shelter);
-  localStorage.setItem("shelters", JSON.stringify(shelters));
+  localStorage.setItem('shelters', JSON.stringify(shelters));
 }
 
 export function getShelter() {
@@ -32,5 +35,9 @@ function setCurrentShelter() {
   const shelters = getShelters();
   const index = shelters.findIndex(shelter => shelter.id == currentShelter.value?.id);
   shelters[index] = currentShelter.value;
-  localStorage.setItem("shelters", JSON.stringify(shelters));
+  localStorage.setItem('shelters', JSON.stringify(shelters));
+}
+
+export function getUniqueAnimals() {
+  return [...new Set(getShelters().reduce((acc: string[], shelter) => [...acc, ...shelter.tiere.map(t => t.art)], []))];
 }
