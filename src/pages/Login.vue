@@ -25,7 +25,7 @@ function attemptLogin() {
             required />
           <input class="form-control mb-2" type="password" placeholder="Passwort" v-model="loginCredentials.password"
             required />
-          <div class="">
+          <div>
             <div class="">Noch kein Konto?<span class="mx-1"></span><a href="/#/register">Hier registrieren!</a></div>
             <div class="mt-3"><button class="btn btn-success">Einloggen</button></div>
           </div>
