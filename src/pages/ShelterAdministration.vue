@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { addShelter, getShelters, updateShelter } from '../shelter';
+import { addShelter, deleteShelter, getShelters, updateShelter } from '../shelter';
 import { Shelter } from '../types';
 import { getUsers } from '../user';
 
@@ -82,9 +82,14 @@ function editShelter(shelter: Shelter) {
             <td>{{ shelter.telefonnummer }}</td>
             <td>{{ users.find(user => user.id === shelter.user_id)?.username }}</td>
             <td>
-              <button class="btn btn-primary" @click.stop="editShelter(shelter)">
-                <i class="bi bi-pen"></i>
-              </button>
+              <div class="d-flex">
+                <button class="btn btn-primary me-2" @click.stop="editShelter(shelter)">
+                  <i class="bi bi-pen"></i>
+                </button>
+                <button class="btn btn-danger" @click.stop="deleteShelter(shelter), (shelters = getShelters())">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
             </td>
           </tr>
         </tbody>
