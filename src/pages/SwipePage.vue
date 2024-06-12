@@ -10,7 +10,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="m-3">
+  <div class="mx-3 mt-3">
     <div class="w-100 d-flex justify-content-between mb-1">
       <button
         ref="prevButton"
@@ -27,7 +27,12 @@ onMounted(() => {
       <div id="carouselExample" class="carousel slide" data-bs-touch="true">
         <div class="carousel-inner">
           <div v-for="(animal, index) in animals" class="carousel-item" :key="index" :class="{ active: index == 1 }">
-            <img :src="animal.url" class="d-block w-100 mt-3" style="height: 60vh; object-fit: contain" alt="..." />
+            <img
+              :src="animal.url"
+              class="d-block w-100 mt-3"
+              style="object-fit: contain; height: calc(100vh - 59.25px - 1rem - 50px - 0.25rem - 1rem - 41.7px - 2rem)"
+              alt="..."
+            />
             <p class="m-3 fs-3 text-white">
               <b>{{ animal.name }}</b>
               ,
