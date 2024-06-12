@@ -55,3 +55,14 @@ export function deleteShelter(shelter: Shelter) {
   shelters.splice(index, 1);
   localStorage.setItem('shelters', JSON.stringify(shelters));
 }
+
+export function getAllAnimals(): Animal[] {
+  let animals = [];
+  const shelters = getShelters();
+  for (let shelter of shelters) {
+    for (let animal of shelter.tiere) {
+      animals.push(animal);
+    }
+  }
+  return animals;
+}

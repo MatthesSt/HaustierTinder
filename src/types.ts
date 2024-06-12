@@ -26,4 +26,5 @@ export type Animal = {
   rasse: string;
   farbe: string;
   besonderheiten: string;
+  url: string;
 };

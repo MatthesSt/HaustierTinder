@@ -21,12 +21,11 @@ export function seed() {
           password: role.role,
           preferences: [],
         });
-        
     }
     for (let user of users.filter(user => user.role == 'user')) {
-        user.preferences.push(Math.random() > 0.5 ? 'Hund': 'Katze');
+      user.preferences.push(Math.random() > 0.5 ? 'Hund' : 'Katze');
     }
-  
+
     localStorage.setItem('users', JSON.stringify(users));
   }
 
@@ -69,6 +68,7 @@ export function seed() {
           rasse: tier.rasse[Math.floor(Math.random() * tier.rasse.length)],
           farbe: tier.farbe[Math.floor(Math.random() * tier.farbe.length)],
           besonderheiten: tier.besonderheiten[Math.floor(Math.random() * tier.besonderheiten.length)],
+          url: `https://picsum.photos/id/${Math.floor(Math.random() * 100)}/200/300`,
         });
       }
     }
