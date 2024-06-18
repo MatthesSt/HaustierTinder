@@ -5,7 +5,6 @@ import { getShelter } from './shelter.ts';
 
 export const currentUser = ref<User | null>(null);
 loadCurrentUser();
-getShelter();
 
 export function getUsers(): User[] {
   return JSON.parse(localStorage.getItem('users') || '[]');
