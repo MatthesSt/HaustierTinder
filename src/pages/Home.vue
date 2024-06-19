@@ -9,7 +9,7 @@ if(!localStorage.getItem("current_user")) {
   <div class="d-flex flex-column justify-content-center align-items-center">
     <h1 class="my-3"><b>Haustier Tinder</b></h1>
     <img class="my-3" src="/public/Favicon.png" alt="" />
-    <h2 class="my-3"><i>Choose your next pet</i></h2>
+    <h2 class="my-3"><i>Finde dein nächstes Haustier</i></h2>
     <button
       @click="() => $router.push('/swipe')"
       type="button"

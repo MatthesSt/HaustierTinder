@@ -13,6 +13,7 @@ onMounted(() => {
   <div class="mx-3 mt-3">
     <div class="w-100 d-flex justify-content-between mb-1">
       <button
+        title="Zurück zum letzten Haustier"
         ref="prevButton"
         data-bs-target="#carouselExample"
         data-bs-slide="prev"
@@ -34,20 +35,17 @@ onMounted(() => {
               alt="..."
             />
             <p class="m-3 fs-3 text-white">
-              <b>{{ animal.name }}</b>
-              ,
-              <i>{{ animal.art }}</i>
-              ,
-              <i>{{ animal.rasse }}</i>
-              ,
+              <b>{{ animal.name }}</b>,
+              <i>{{ animal.art }}</i>,
+              <i>{{ animal.rasse }}</i>,
               <i>{{ animal.alter }}</i>
             </p>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button title="Letztes Haustier" class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
           <i class="bi bi-hand-thumbs-down fs-1"></i>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button title="Nächstes Haustier" class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
           <i class="bi bi-heart fs-1"></i>
         </button>
       </div>

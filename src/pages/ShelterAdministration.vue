@@ -50,12 +50,12 @@ function editShelter(shelter: Shelter) {
           <input type="text" class="form-control mb-2" placeholder="Homepage" v-model="currentShelter.homepage" required/>
           <input type="text" class="form-control mb-2" placeholder="Standort" v-model="currentShelter.standort" required/>
           <input type="text" class="form-control mb-2" placeholder="Telefonnummer" v-model="currentShelter.telefonnummer" required/>
-          <select class="form-select" aria-label="Default select example" v-model="currentShelter.user_id" required>
+          <select class="form-select" aria-label="Auswahl des Verwalters" v-model="currentShelter.user_id" required>
             <option value="">Wähle einen Verwalter</option>
             <option v-for="user of users" :value="user.id">{{ user.username }}</option>
           </select>
           <div class="d-flex justify-content-end mt-2">
-            <button class="btn btn-success">Speichern</button>
+            <button title="Speichern" class="btn btn-success">Speichern</button>
           </div>
         </form>
       </div>
@@ -83,10 +83,10 @@ function editShelter(shelter: Shelter) {
             <td>{{ users.find(user => user.id === shelter.user_id)?.username }}</td>
             <td>
               <div class="d-flex">
-                <button class="btn btn-primary me-2" @click.stop="editShelter(shelter)">
+                <button title="Tierheim bearbeiten" class="btn btn-primary me-2" @click.stop="editShelter(shelter)">
                   <i class="bi bi-pen"></i>
                 </button>
-                <button class="btn btn-danger" @click.stop="deleteShelter(shelter), (shelters = getShelters())">
+                <button title="Tierheim löschen" class="btn btn-danger" @click.stop="deleteShelter(shelter), (shelters = getShelters())">
                   <i class="bi bi-trash"></i>
                 </button>
               </div>
