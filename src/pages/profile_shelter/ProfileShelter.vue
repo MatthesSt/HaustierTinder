@@ -19,7 +19,7 @@ const newAnimal = ref<Animal>({ ...emptyAnimal });
 </script>
 <template>
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Tierinserat anlegen</button>
+  <button title="Tierinserat anlegen" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Tierinserat anlegen</button>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -27,7 +27,7 @@ const newAnimal = ref<Animal>({ ...emptyAnimal });
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Tierinserat anlegen</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button title="Schließen" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <input type="text" class="form-control mb-1" placeholder="Name" v-model="newAnimal.name" />
@@ -36,11 +36,12 @@ const newAnimal = ref<Animal>({ ...emptyAnimal });
           <input type="text" class="form-control mb-1" placeholder="Rasse" v-model="newAnimal.rasse" />
           <input class="form-control mb-1" placeholder="Farbe" v-model="newAnimal.farbe" />
           <textarea class="form-control" placeholder="Besonderheiten" v-model="newAnimal.besonderheiten"></textarea>
-          <input type="text" class="form-control" placeholder="Bildadresse" v-model="newAnimal.url"></input>
+          <input type="text" class="form-control" placeholder="Bildadresse" v-model="newAnimal.url">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+          <button title="Abbrechen" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
           <button
+              title="Tierinserat anlegen"
             type="button"
             class="btn btn-primary"
             data-bs-dismiss="modal"

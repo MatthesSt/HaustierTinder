@@ -14,7 +14,7 @@ function checkActive(route: any) {
         <router-link :to="route.path"><i :class="route.icon"></i></router-link>
       </div>
     </div>
-    <button class="btn btn-danger" @click="logoutUser">
+    <button title="Ausloggen" class="btn btn-danger" @click="logoutUser">
       <i class="bi bi-door-closed"></i>
     </button>
   </div>

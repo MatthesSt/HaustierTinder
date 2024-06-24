@@ -17,10 +17,10 @@ Willkommen bei HaustierTinder, unserer Vermittlung für Haustiersuchende und Tie
     - Tierinserate anlegen
     - Informationen -> Kontakt
 
-* Administration: [Matthes, Danny]
+✔ Administration: [Matthes, Danny]
     - Tierheimprofile anlegen
 
-* Login [Danny, Matthes]
+✔ Login [Danny, Matthes]
     - Enduser, Admin, Tierheime
 
 * Default- / Start-Seite [Tobias, Fabian, Vincent]
@@ -58,28 +58,28 @@ User[]
     name: string
     email: email
     password: string
-    role: "user"| "admin"|"tierheim"
-    id:id
+    role: "user" | "admin" | "tierheim"
+    id: id
     geseheneTiere:
         {
-        ids:[Tierheim_id,Tier_id]
-        anzahl:number
-        liked:boolean
+        ids: [Tierheim_id, Tier_id]
+        anzahl: number
+        liked: boolean
         }[]
 
 Tierheim[]
 
     name: string
     standort: string
-    id:id
-    telefonnummer:string
-    email:email
+    id: id
+    telefonnummer: string
+    email: email
     homepage: string
     tier[]
         name: string
         id: id
         alter: number
-        art:string
-        rasse:string
+        art: string
+        rasse: string
         farbe: string
         besonderheiten: string

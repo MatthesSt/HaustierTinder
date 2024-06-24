@@ -29,7 +29,7 @@ function attemptLogin() {
               <span class="mx-1"></span>
               <a href="/#/register">Hier registrieren!</a>
             </div>
-            <div class="mt-3"><button class="btn btn-success">Einloggen</button></div>
+            <div class="mt-3"><button title="Einloggen" class="btn btn-success">Einloggen</button></div>
           </div>
         </form>
       </div>

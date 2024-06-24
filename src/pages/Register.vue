@@ -41,7 +41,7 @@ function saveUser() {
               <span class="mx-1"></span>
               <a href="/#/login">Zum Login</a>
             </div>
-            <div class="mt-3"><button class="btn btn-success">Registrieren</button></div>
+            <div class="mt-3"><button title="Registrieren" class="btn btn-success">Registrieren</button></div>
           </div>
         </form>
       </div>
